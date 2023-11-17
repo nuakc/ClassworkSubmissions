@@ -1,0 +1,29 @@
+/**
+ * This is the main class in which we will call/create new
+ * methods in to do things such as count in certain increments.
+ */
+public class SimpleLoop 
+{
+
+	public static void main(String[] args) 
+	{
+		//create method "countSomeNums" that counts in a special pattern
+		countSomeNums();
+
+	}
+
+	/**
+	 * This method is a for loop that prints out a number
+	 * pattern that counts in increments of 18 starting from -4
+	 */
+	private static void countSomeNums() {
+		//create for loop
+		for (int i = -4; i < 90; i +=18)
+		{
+			//create print statement to print nums 
+			System.out.println(i);
+		}
+		
+	}
+
+}
