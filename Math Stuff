@@ -1,0 +1,49 @@
+public class MathStuff {
+
+	public static void main(String[] args) 
+	{
+	multTwoNums(5, 2);
+	
+	int myInt = -4;
+	double myDoub = -16.0;
+	
+	//test abs method. for absolute value
+	double myAbs = Math.abs(myDoub);
+	
+	//test sqrt method. for square root
+	double mySqrt = Math.sqrt(myAbs);
+	
+	System.out.println(mySqrt);
+	
+	//test pow method. for exponents
+	//only returns doubles
+	double base = 2.0;
+	double exp = 5.0;
+	double prod = Math.pow(base, exp);
+	
+	System.out.println(prod);
+	
+	//test random method
+	double n = 1.0;
+	double l = 10.0;
+	Math.random();
+
+
+	}
+
+	public static void multTwoNums(int j, int k) 
+	{
+	int a = j;
+	for (int i = 1; i < k; i++ )
+	{
+		j *= a;
+	}
+	System.out.println(j);
+	
+	
+	
+	
+		
+	}
+
+}
