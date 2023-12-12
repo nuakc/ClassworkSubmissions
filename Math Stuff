@@ -1,7 +1,10 @@
+import java.util.Random;
+
 public class MathStuff {
 
 	public static void main(String[] args) 
 	{
+	//calls method made and gives it an input to work with
 	multTwoNums(5, 2);
 	
 	int myInt = -4;
@@ -23,14 +26,151 @@ public class MathStuff {
 	
 	System.out.println(prod);
 	
+	//TASK 1 & 2: WRAPPER CLASSES 
+	
+	//TASK 1: Instantiate an Integer Object
+	Integer myInteger = 4;
+	
+	//prints out the max and min values an Integer can store
+	System.out.println(Integer.MAX_VALUE);
+	System.out.println(Integer.MIN_VALUE);
+	
+	//TASK 2: Instantiate a Double Object
+	Double myDouble = 6.6;
+	
+	//prints out the max and min values a Double can store
+	System.out.println(Double.MAX_VALUE);
+	System.out.println(Double.MIN_VALUE);
+	
+	//TASK 3 & 4: CASTING REVIEW
+
+	//TASK 3: Declare an int and print it as a double
+	int x = 5;
+	System.out.println((double) x);
+	
+	//TASK 4: Declare a double and print it as an int
+	double z = 6.2;
+	System.out.println((int) z);
+
+	//TASK 5: Create a method that generates a random number from 1-10 inclusive.
 	//test random method
-	double n = 1.0;
-	double l = 10.0;
-	Math.random();
+	printRandomNum();
+	
+	//TASK 6: Declare two ints called intA and intB that have values of -36 and +12 respectively.
+	int a = -36;
+	int b = 12;
+	
+	//TASK 7: Declare two doubles called dubA and 
+	//dubB that have values of -100.0 and 0.64 respectively. 
+	double a1 = -100.0;
+	double b1 = 0.64;
+	
+	//TASK 8: Instantiate two Integer objects called integerA 
+	//and integerB with the same values as the ints. 
+	Integer integerA = -36;
+	Integer integerB = 12;
+	
+	//TASK 9: 5. Instantiate two Double objects called doubleA 
+	//and doubleB with the same values as the doubles. 
+	Double doubleA = -100.0;
+	Double doubleB = 0.64;
+	
+	//TASK 10-13: 10. Use your exponent method to print out one int 
+	//raised to the power of the other int.
+		//11. Use your method to print out one Integer 
+		//raised to the power of the other Integer. 
+		//12. Use your method to print out one double raised 
+		//to the power of the other double. 
+		//13.Use your method to print out one Double 
+		//raised to the power of the other Double. 
+	multTwoNums(a,b);
+	multTwoNums(integerA, integerB);
+	multTwoNums((int)a1, (int)b1);
+	multTwoNums(doubleA.intValue(), doubleB.intValue());
+	
+	//TASK 14: Print out the absolute value of intA, integerA, dubA, and doubleB.
+	double abs = Math.abs(a);
+	System.out.println(abs);
+	
+	double mama = Math.abs(integerA);
+	System.out.println(mama);
+	
+	double papa = Math.abs(a1);
+	System.out.println(papa);
+	
+	double baba = Math.abs(doubleB);
+	System.out.println(baba);
+	
+	//TASK 15: Print out the square root of dubB and doubleB.
+	double mySquid = Math.sqrt(b1);
+	System.out.println(mySquid);
+	
+	double myJellyFish  = Math.sqrt(doubleB);
+	System.out.println(myJellyFish);
+	
+	//TASK 16: Print out the square root of the absolute value of intA and integerA.
+	double myWomp = Math.sqrt(abs);
+	System.out.println(myWomp);
+	
+	double myButterfly  = Math.sqrt(mama);
+	System.out.println(myButterfly);
+
+	//TASK 17:Print out one double raised to the power of the other double. 
+	double basement = b1;
+	double exponent = a1;
+	double result = Math.pow(basement, exponent);
+	System.out.println(result);
+	
+	//TASK 18: Print out one int raised to the power of one of your doubles.
+	double basket = (double)a;
+	double extreme = a1;
+	double chicken = Math.pow(basket, extreme);
+	System.out.println(chicken);
+	
+	//TASK 19:Print out one Double raised to the power of one of your Integers.
+	double bonnet = doubleA;
+	double salty = (double)integerB;
+	double broth = Math.pow(bonnet, salty);
+	System.out.println(broth);
+	
+	//boxing/auto boxing
+	int falala = 7;
+	int jolly = 2;
+	//multTwoNummies(falala, jolly);
+	int integerSum = multTwoNummies(falala, jolly);
+	System.out.println(integerSum);
 
 
+
+
+
+
+
+
+	
+
+
+
+	
+	
 	}
 
+	//method for TASK 5
+	private static void printRandomNum() 
+	{
+		Random rand = new Random();
+		int randomNumber = rand.nextInt(10) + 1;
+		System.out.println("rando number between 1 and 10: " + randomNumber);
+		
+	}
+/**
+ * Creates method that can multiply numbers without using a "*". Can also 
+ * be altered and used for exponents.  Overall not needed as there are already blueprints in 
+ * java to do both of those things.
+ * 
+ * @param j
+ * @param k
+ */
 	public static void multTwoNums(int j, int k) 
 	{
 	int a = j;
@@ -38,12 +178,19 @@ public class MathStuff {
 	{
 		j *= a;
 	}
+	
 	System.out.println(j);
-	
-	
-	
-	
 		
+	}
+	/**
+	 * This method takes two Integer objects and returns their sum as an int
+	 * @param j first additive
+	 * @param k second additive
+	 */
+	public static int multTwoNummies(Integer j, Integer k) 
+	{
+	return j+k;
+			
 	}
 
 }
