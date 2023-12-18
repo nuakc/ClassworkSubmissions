@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class IfsAndLoops 
+{
+
+	public static void main(String[] args) 
+	{
+		//import a scanner
+		Scanner pretzel = new Scanner(System.in);
+		
+		//scan in two integers
+		Integer x = pretzel.nextInt();
+		Integer y = pretzel.nextInt();
+		
+		//close scanner
+		pretzel.close();
+		
+		//call/create new method that prints if x & y are odd or even or both odd and both even
+		printEvenOrOdd(x, y);
+		
+		//call/create new method that will be passed x and y print the exponent table of x to 
+		//the y. If either number is negative, print an error message instead. x^y
+		printExpTable(x, y);
+		
+		//call/create new method that will return the factorial of a number. If it is negative, 
+		//instead print an error message and return -1. In the main method, add a print statement t
+		//hat will print "The value of the factorial is (the returned value)."
+		//getFact(x);
+		System.out.println("The value of the factorial is "  + getFact(x));
+
+
+
+	}
+
+	private static int getFact(Integer x) 
+	{
+		//create if statement to check if negative
+		if (x >= 0) 
+		{
+			
+		//create for loop that returns the factorial of a 
+		int i,munch = 1;
+		for(i = 1; i <= x; i++)
+		{
+			munch = munch * i;
+		}
+		return munch;
+		
+		}
+		else 
+		{
+			System.out.println("Sorry, that won't work for the factorial calculator...");
+			return -1;
+		}
+		
+	}
+
+	private static void printExpTable(Integer x, Integer y) 
+	{
+		// create loop to make exponent loop for x^y
+		for(int i = 0; i <= y; i++)
+		{
+			if (x >= 0 && y >= 0)
+			{
+				double base = (double)x;
+				double expo = (double)i;
+				double chicken = Math.pow(base, expo);
+				System.out.println(x + " to the " + i + " power is " + chicken);
+			}
+			else
+			{
+				System.out.println("Apologies, I do not know how to do that yet.");
+				break;
+			}
+		}
+	}
+
+	private static void printEvenOrOdd(Integer x, Integer y) 
+	{
+		// create if statement to tell whether inputs are od or even
+		if (x%2 == 0 && y%2 == 0)
+		{
+			System.out.println(x + " and " + y + " are both even");
+		}
+		else if(x%2 == 0 && y%2 != 0)
+		{
+			System.out.println(x + " is even, " + y + " is odd.");
+		}
+		else if(x%2 != 0 && y%2 == 0)
+		{
+			System.out.println(x + " is odd, " + y + " is even.");
+		}
+		else 
+		{
+			System.out.println(x + " is odd, " + y + " is odd.");
+		}
+
+	}
+
+}
