@@ -9,6 +9,7 @@ public class DiceRollerProgram
 
 	public static void main(String[] args) 
 	{	
+		
 		//create a scanner
 		Scanner rawr = new Scanner(System.in);
 		
@@ -34,6 +35,13 @@ public class DiceRollerProgram
 		//close scanner
 		rawr.close();
 		
+		//give directions
+		System.out.println("Give me the amount of dice you want to roll and the amount of faces all the dice are, use the form Dice#dFace#.");
+		System.out.println("(#d#, only whole posistive numbers are accepted)");
+		
+		//instantiate new string for spaceOut method
+		String onichann = new String(" If ya had the chance     to change your fate wooja? ");
+		
 		//calls method that counts how many times a char shows up in a String and 
 		//returns that number; method is declared as int to make things neater 
 		int l = countChars(meow, woof);
@@ -45,12 +53,26 @@ public class DiceRollerProgram
 		//the d respectively and point them out as the first and second number. (#d#)
 		separateNums(poom);
 		
-		
-		
+		//calls method that is passed a String and returns a different String that
+		//is the same as the passed String without any spaces. 
+		spaceOut(onichann);
 		
 		
 	}
 	
+	/**
+	 * This method takes a String and returns a different String that
+	 * is the same as the passed String without any spaces.
+	 * 
+	 * @param onion
+	 */
+	private static void spaceOut(String onichann) 
+	{
+		
+		String newOnichann = onichann.replace(" ", "");
+		System.out.println(newOnichann);
+	}
+
 	/**
 	 * The method should print out the number before the d and the number after 
 	 * the d respectively and point them out as the first and second number. 
@@ -82,6 +104,7 @@ public class DiceRollerProgram
 		rollDice(a, b);
 		
 	}
+	
 	/**
 	 * This method rolls the numbers like dice, left number = the amount of dice and
 	 * the right number = the amount of faces the dice has. For example, if the String 
