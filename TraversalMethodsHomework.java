@@ -34,6 +34,13 @@ public class ArrayTraversalMethodsHw
 
 	}
 
+	/**
+	 *a method that is passed an int array and returns
+	 *the highest value in that array.
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public static int checkHighestValue(int[] arr) 
 	{
 		//
@@ -51,6 +58,13 @@ public class ArrayTraversalMethodsHw
 		
 	}
 
+	/**
+	 * a method that is passed an array of doubles and 
+	 * returns a double that is equal to their average. 
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public static double checkAverage(double[] arr) 
 	{
 		//
