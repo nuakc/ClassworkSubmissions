@@ -1,4 +1,5 @@
-// 
+// declare/define all integers and assign them the 
+// value of appropriate pin number on arduino:
 const int buzzer = 13;
 const int threshold = 2;
 int sensorValue2 = 0;
@@ -9,6 +10,9 @@ int sensorValue1 = 0;
 #define ENABLE 5
 #define DIRA 3
 #define DIRB 4
+
+// declare int i for future use in for loop 
+// condition for fan motor:
 int i;
 
 // the setup routine runs once when you press reset:
@@ -40,10 +44,13 @@ void loop()
   // if statement that controls fan motor:
   if (voltage> threshold)
   {
-    digitalWrite(ENABLE,HIGH); // enable on
+    // enable on:
+    digitalWrite(ENABLE,HIGH); 
     for (i=0;i<5;i++) 
     {
-    digitalWrite(DIRA,HIGH); //one way
+    // turns fan on and sprins it in one specific direction:
+    digitalWrite(DIRA,HIGH);
+    // keeps fan from spinning in opposite direction
     digitalWrite(DIRB,LOW);
     }
   }
