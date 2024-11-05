@@ -11,10 +11,6 @@ int sensorValue1 = 0;
 #define DIRA 3
 #define DIRB 4
 
-// declare int i for future use in for loop 
-// condition for fan motor:
-int i;
-
 // the setup routine runs once when you press reset:
 void setup() 
 {
@@ -46,13 +42,11 @@ void loop()
   {
     // enable on:
     digitalWrite(ENABLE,HIGH); 
-    for (i=0;i<5;i++) 
-    {
     // turns fan on and sprins it in one specific direction:
     digitalWrite(DIRA,HIGH);
     // keeps fan from spinning in opposite direction
     digitalWrite(DIRB,LOW);
-    }
+    
   }
   else
   {
@@ -71,6 +65,7 @@ void loop()
     digitalWrite(buzzer, LOW);
     // stop the program for <sensorValue> milliseconds:
     delay(sensorValue1);
+    
   }
   else
   {
