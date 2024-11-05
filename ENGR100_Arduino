@@ -42,7 +42,7 @@ void loop()
   {
     // enable on:
     digitalWrite(ENABLE,HIGH); 
-    // turns fan on and sprins it in one specific direction:
+    // turns fan on and spins it in one specific direction:
     digitalWrite(DIRA,HIGH);
     // keeps fan from spinning in opposite direction
     digitalWrite(DIRB,LOW);
