@@ -2,7 +2,6 @@
 // value of appropriate pin number on arduino:
 const int buzzer = 13;
 const int threshold = 2;
-int sensorValue2 = 0;
 int sensorPin = A0;
 int sensorValue = 0;
 int sensorPin1 = A2;
@@ -32,8 +31,6 @@ void loop()
   float voltage = sensorValue * (5.0 / 1023.0);
   // print out the value you read:
   Serial.println(voltage);
-  // read the value from the sensor:
-  sensorValue2 = analogRead(sensorPin);
   // read the value from the sensor:
   sensorValue1 = analogRead(sensorPin1);
 
